@@ -11,38 +11,9 @@ nr_letters= int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-#Eazy Level - Order not randomised:
-#e.g. 4 letter, 2 symbol, 2 number = JduE&!91
-
-# Auto generatingpassword letters:
-pass_letters = ""
-for l in range(nr_letters):
-  pass_letters += choice(letters)
-
-# Auto generating password symbols:
-pass_symbols = ""
-for s in range(nr_symbols):
-  pass_symbols += choice(symbols)
-
-# Auto generating password numbers:
-pass_num = ""
-for num in range(nr_numbers):
-  pass_num += choice(numbers)
-
 print("")
-assembled_pass = pass_letters + pass_num + pass_symbols
-auto_password =  "".join(assembled_pass) 
-
-print(f"your auto-generated password is: {auto_password}")
-
-
-
-
-#Hard Level - Order of characters randomised:
-#e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
 password_list = []
-
 
 # Auto generatingpassword letters:
 pass_letters = ""
@@ -59,11 +30,8 @@ pass_num = ""
 for num in range(nr_numbers):
   password_list.append(choice(numbers))
 
-
 print("")
-print(password_list)
 shuffle(password_list)
-print(password_list)
 # assembled_pass = pass_letters + pass_num + pass_symbols
 auto_password =  "".join(password_list) 
 print(f"your auto-generated password is: {auto_password}")
